@@ -1,4 +1,4 @@
-# Spring Boot Username-Password Authentication Example With Redis Session
+# Spring Boot Username-Password Authentication Example
 
 For more information on this topic, you can refer to the following links:
 - [Spring Boot for Dummies 4.2: Spring Security Username Password Auth](https://medium.com/@yashpatel007/spring-boot-for-dummies-4-2-spring-security-username-password-auth-b5457d3a1969)
