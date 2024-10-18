@@ -1,6 +1,7 @@
 package com.example.example.user.services;
 
 import com.example.example.user.entity.User;
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,12 +10,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+@Data
 public class CustomUserDetails implements UserDetails {
 
     public User user;
 
     public CustomUserDetails(User user) {
         this.user = user;
+    }
+
+    public CustomUserDetails() {
     }
 
 

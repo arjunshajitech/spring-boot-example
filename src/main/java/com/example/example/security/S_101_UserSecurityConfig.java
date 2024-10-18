@@ -7,12 +7,13 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
 @Order(101)
-public class UserSecurityConfig {
+public class S_101_UserSecurityConfig {
 
     @Bean
     SecurityFilterChain userSecurityFilterChain(HttpSecurity http) throws Exception {
@@ -20,6 +21,10 @@ public class UserSecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable);
         http.httpBasic(Customizer.withDefaults());
         http.formLogin(Customizer.withDefaults());
+
+        http.sessionManagement((session) -> session
+                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+        );
 
         http.authorizeHttpRequests((authorize) -> authorize
                 .requestMatchers(UNSECURE_URLS).permitAll()
