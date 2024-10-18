@@ -5,5 +5,6 @@ For more information on this topic, you can refer to the following links:
 - [Spring Security: Password Storage](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/index.html)
 - [Spring Session: Redis Configuration](https://docs.spring.io/spring-session/reference/configuration/redis.html)
 - [Spring Session: Redis](https://docs.spring.io/spring-session/reference/guides/boot-redis.html)
+- [Spring Security: Filter chain](https://docs.spring.io/spring-security/reference/5.8/migration/servlet/config.html)
 
 

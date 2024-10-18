@@ -30,7 +30,6 @@ public class UserController {
     final UserRepository userRepository;
     final PasswordEncoder passwordEncoder;
     final AuthenticationManager authenticationManager;
-    final CustomUserDetailsService customUserDetailsService;
 
     private final SecurityContextRepository securityContextRepository =
             new HttpSessionSecurityContextRepository();
