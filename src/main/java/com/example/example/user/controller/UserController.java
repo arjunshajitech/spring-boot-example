@@ -67,7 +67,6 @@ public class UserController {
 
     @GetMapping("/me")
     public User me(Principal principal) {
-        System.out.println("Name: " + principal.getName());
         return userRepository.findByEmail(principal.getName());
     }
 }

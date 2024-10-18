@@ -22,10 +22,6 @@ public class S_101_UserSecurityConfig {
         http.httpBasic(Customizer.withDefaults());
         http.formLogin(Customizer.withDefaults());
 
-        http.sessionManagement((session) -> session
-                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
-        );
-
         http.authorizeHttpRequests((authorize) -> authorize
                 .requestMatchers(UNSECURE_URLS).permitAll()
                 .anyRequest().authenticated()
