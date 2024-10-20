@@ -12,7 +12,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @Table(name = "users")
-public class User implements Serializable {
+public class User {
 
     public User() {
     }
