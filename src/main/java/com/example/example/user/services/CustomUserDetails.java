@@ -1,7 +1,6 @@
 package com.example.example.user.services;
 
 import com.example.example.user.entity.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,9 +22,7 @@ public class CustomUserDetails implements UserDetails {
     public CustomUserDetails() {
     }
 
-
     @Override
-    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority(user.getRole().toString()));
@@ -33,37 +30,31 @@ public class CustomUserDetails implements UserDetails {
     }
 
     @Override
-    @JsonIgnore
     public String getPassword() {
         return user.getPassword();
     }
 
     @Override
-    @JsonIgnore
     public String getUsername() {
         return user.getEmail();
     }
 
     @Override
-    @JsonIgnore
     public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
-    @JsonIgnore
     public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
-    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
-    @JsonIgnore
     public boolean isEnabled() {
         return true;
     }
